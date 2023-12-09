@@ -1,18 +1,18 @@
 import React, { useEffect, useState } from 'react';
 import * as signalR from "@microsoft/signalr";
 import Userfront from "@userfront/toolkit/react";
+// var CryptoJS = require("crypto-js");
 
+let AESKey = '8080808080808080';
 
 const Hub = () => {
-
-  console.log(Userfront);
   var CryptoJS = require("crypto-js");
-
-  const hubConnection = new signalR.HubConnectionBuilder().withUrl("http://localhost:5064/hub")
+  const hubConnection = new signalR.HubConnectionBuilder().withUrl("https://localhost:7114/hub")
   .build();
-  
   hubConnection.on("Notify", function (message) {
-    console.log(message); //здесь инфа, кто подключился
+    
+    // publicKey = message;
+    console.log("Я подключён!"); //здесь инфа, кто подключился
   });
 
   hubConnection.start();
@@ -42,15 +42,24 @@ const Hub = () => {
     const onSendMessage = (e) => {
       if (e) {
         // Encrypt
-        var cipherMessage = CryptoJS.AES.encrypt(message, 'secret key').toString();
-        fetch("http://localhost:5064/api/message", {
+        var AESKeyUtf8 = CryptoJS.enc.Utf8.parse(AESKey);
+        let AESIvUtf8 = CryptoJS.enc.Utf8.parse(AESKey);
+        let cipherMessage = CryptoJS.AES.encrypt(CryptoJS.enc.Utf8.parse(message), AESKeyUtf8,
+        { 
+          keySize: 128 / 8, 
+          iv: AESIvUtf8, 
+          mode: CryptoJS.mode.CBC, 
+          padding: CryptoJS.pad.Pkcs7 
+        }); 
+
+        fetch("https://localhost:7114/api/message", {
           "method": "POST",
           "headers": {
             Accept: "application/json",
             "Content-Type": "application/json"
           },
           body: JSON.stringify({
-            message: cipherMessage,
+            message: cipherMessage.toString(),
             username: Userfront.user.email
           })
         });
