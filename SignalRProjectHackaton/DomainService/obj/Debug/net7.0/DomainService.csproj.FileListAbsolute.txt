@@ -1,0 +1,17 @@
+C:\Users\димон\source\repos\SignalRProjectHackaton\DomainService\bin\Debug\net7.0\DomainService.deps.json
+C:\Users\димон\source\repos\SignalRProjectHackaton\DomainService\bin\Debug\net7.0\DomainService.dll
+C:\Users\димон\source\repos\SignalRProjectHackaton\DomainService\bin\Debug\net7.0\DomainService.pdb
+C:\Users\димон\source\repos\SignalRProjectHackaton\DomainService\bin\Debug\net7.0\DAL.dll
+C:\Users\димон\source\repos\SignalRProjectHackaton\DomainService\bin\Debug\net7.0\DomainModel.dll
+C:\Users\димон\source\repos\SignalRProjectHackaton\DomainService\bin\Debug\net7.0\DAL.pdb
+C:\Users\димон\source\repos\SignalRProjectHackaton\DomainService\bin\Debug\net7.0\DomainModel.pdb
+C:\Users\димон\source\repos\SignalRProjectHackaton\DomainService\obj\Debug\net7.0\DomainService.csproj.AssemblyReference.cache
+C:\Users\димон\source\repos\SignalRProjectHackaton\DomainService\obj\Debug\net7.0\DomainService.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\димон\source\repos\SignalRProjectHackaton\DomainService\obj\Debug\net7.0\DomainService.AssemblyInfoInputs.cache
+C:\Users\димон\source\repos\SignalRProjectHackaton\DomainService\obj\Debug\net7.0\DomainService.AssemblyInfo.cs
+C:\Users\димон\source\repos\SignalRProjectHackaton\DomainService\obj\Debug\net7.0\DomainService.csproj.CoreCompileInputs.cache
+C:\Users\димон\source\repos\SignalRProjectHackaton\DomainService\obj\Debug\net7.0\DomainService.csproj.CopyComplete
+C:\Users\димон\source\repos\SignalRProjectHackaton\DomainService\obj\Debug\net7.0\DomainService.dll
+C:\Users\димон\source\repos\SignalRProjectHackaton\DomainService\obj\Debug\net7.0\refint\DomainService.dll
+C:\Users\димон\source\repos\SignalRProjectHackaton\DomainService\obj\Debug\net7.0\DomainService.pdb
+C:\Users\димон\source\repos\SignalRProjectHackaton\DomainService\obj\Debug\net7.0\ref\DomainService.dll

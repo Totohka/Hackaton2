@@ -7,9 +7,6 @@ const Auth = () => {
 
   Userfront.init("6nzgmwpb");
 
-    useLayoutEffect(() => {
-     document.getElementById('gray_space').style.backgroundColor = 'black';
-    }, []);
     return (
       <LoginForm />
     );

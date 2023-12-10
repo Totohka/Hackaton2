@@ -1,9 +1,8 @@
 import Userfront from "@userfront/core";
 import React from "react";
 import "./Auth.css";
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faGoogle } from '@fortawesome/free-brands-svg-icons';
-
+import logo from './img/logo.svg'; // with import
+import { NavLink } from "react-router-dom";
 
 Userfront.init("6nzgmwpb");
 
@@ -22,14 +21,14 @@ if (
   
     handleClick(event) {
       event.preventDefault();
+      
       Userfront.login({ method: this.props.provider });
     }
   
     render() {
       return (
-        <button className="g-button" onClick={this.handleClick}>
-          <FontAwesomeIcon size="2xl" icon={faGoogle} style={{color: "aqua", marginTop: "5px", marginLeft: "5px"}} />
-          <p className="g-text">Войти с помощью Google</p>
+        <button className='EnterGoogleBtn' onClick={this.handleClick}> 
+          Войти с помощью Google
         </button>
       );
     }
@@ -76,37 +75,33 @@ class LoginForm extends React.Component {
 
   render() {
     return (
-      <div className="form_auth" >
-        <form onSubmit={this.handleSubmit}>
-        <div className="title_auth">С возвращением!</div>
-          <div className="input-container ic1">
-            <input id="email" className="input" 
-                  name="emailOrUsername"
-                  type="text"
-                  value={this.state.emailOrUsername}
-                  onChange={this.handleInputChange} 
-            placeholder=" " />
-            <div className="cut cut-short"></div>
-            <label for="email" className="placeholder">Email</label>
+      <div className="App" >
+        <div className='RegistrationForm'>
+          
+          <div className='Logo'>
+            <img src={logo}></img>
           </div>
-          <div className="input-container ic2">
-            <input id="password" className="input" 
-                  name="password"
-                  type="password"
-                  value={this.state.password}
-                  onChange={this.handleInputChange} 
-            placeholder=" " />
-            <div className="cut cut-short"></div>
-            <label for="password" className="placeholder">Пароль</label>
+          <h1>Авторизация</h1>
+          <form className='AutthorizationForm' onSubmit={this.handleSubmit}>
+              <input id="email"
+                    name="emailOrUsername"
+                    type="text"
+                    value={this.state.emailOrUsername}
+                    onChange={this.handleInputChange} 
+                    placeholder='Email'/>
+              <input id="password" 
+                    name="password"
+                    type="password"
+                    value={this.state.password}
+                    onChange={this.handleInputChange} 
+                  placeholder='Пароль'/>
+            <button className='EnterBtn' type="submit">Войти</button>
+          </form>
+          <div className='AutthorizationForm'>
+            <SSOButton provider="google"/>
           </div>
-          <button className="submit" type="submit">Войти</button>
-        </form>
-        <div className="form-or">
-          ИЛИ 
-        </div>
-        <div>
-          <SSOButton provider="google"/>
-        </div>
+          <NavLink to='/registration'className='RegisterText'style={{ textDecoration: 'none' }}>Зарегистрироваться</NavLink>
+          </div>
       </div>
     );
   }

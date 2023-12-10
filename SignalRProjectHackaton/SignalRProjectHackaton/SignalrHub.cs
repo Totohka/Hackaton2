@@ -1,22 +1,31 @@
 ﻿using Microsoft.AspNetCore.SignalR;
-using System.Diagnostics.CodeAnalysis;
-using System.Security.Cryptography;
+using SignalR.Project.Hackaton.DomainModel.Entities;
+using SignalR.Project.Hackaton.DomainService.Service.Interface;
+using SignalR.Project.Hackaton.DomainServices.Interface;
 
 public class SignalrHub : Hub
 {
-    //protected readonly RSACryptoServiceProvider _rsaCryptoServiceProvider;
-    //public SignalrHub([NotNull] RSACryptoServiceProvider rsaCryptoServiceProvider)
-    //{
-    //    _rsaCryptoServiceProvider = rsaCryptoServiceProvider;
-    //}
+    private readonly IConnectionService _connectionService;
+    private readonly IDashboardService _dashboardService;
+    public SignalrHub(IConnectionService connectionService,
+                      IDashboardService dashboardService)
+    {
+        _connectionService = connectionService;
+        _dashboardService = dashboardService;
+    }
     public override async Task OnConnectedAsync()
     {
-        await Clients.All.SendAsync("Notify", $"{Context.ConnectionId} вошел в чат");
+        _dashboardService.CreateNewVisit(new Visit() { Date = DateTime.Now });
+        await Clients.Caller.SendAsync("ConnectedHub");
         await base.OnConnectedAsync();
     }
     public override async Task OnDisconnectedAsync(Exception? exception)
     {
-        await Clients.All.SendAsync("Notify", $"{Context.ConnectionId} покинул в чат");
+        if (Context.ConnectionId != null)
+        {
+            _connectionService.DeleteConnection(Context.ConnectionId);
+        }
+        await Clients.Caller.SendAsync("Notify");
         await base.OnDisconnectedAsync(exception);
     }
 }

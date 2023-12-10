@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\buildMultiTargeting\SignalR.Project.Hackaton.Api.props" />
+</Project>

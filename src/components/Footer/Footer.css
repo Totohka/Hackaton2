@@ -1,0 +1,36 @@
+/* Footer START */
+footer{
+    position: fixed;
+      left: 24%;
+      bottom: 0;
+      width: 74%;
+      background-color: white;
+      flex-shrink: 0;
+  fill: #FFF;
+  box-shadow: 14px 27px 45px rgba(112, 144, 176, 0.20);
+  height: auto;
+  }
+  .footer_wrapper{
+    display: inline-flex;
+    position: relative;
+    margin-left: 1%;
+  }
+  .footer_block{
+    display: inline-flex;
+    color: #718096;
+  text-align: center;
+  font-family: Montserrat;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 24px; /* 171.429% */
+  position: relative;
+  top: -15px;
+  }
+  .footer_block p{
+    margin-right: 20px;
+  }
+  .footer_block .LogoFooter{
+    margin-right: 94px;
+  }
+  /* Footer END */

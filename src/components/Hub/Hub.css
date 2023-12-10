@@ -1,0 +1,195 @@
+@import url('https://fonts.googleapis.com/css2?family=Unbounded:wght@200;300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*,
+*::before,
+*:after {
+  box-sizing: border-box;
+  /* font-family: 'Inter', sans-serif; */
+}
+
+body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  /* font-family: 'Inter', sans-serif; */
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+.App {
+  /* text-align: center; */
+  background-color: white;
+  padding: 10px 50px;
+  display: inline-block;
+}
+body{
+    background-image: none;
+   
+}
+.chats{
+    display: inline;
+    
+}
+.chatAll{
+    background-image: url('./img/Zigzag.svg'); 
+    background-repeat: no-repeat; 
+    background-size: cover;
+    
+    float:right;
+}
+.messages{
+    
+    float:right;
+    display:flex;
+    margin-right: 30px;
+    margin-top: 0%;
+    position: fixed;
+    bottom: 37px;
+    right: 0;
+    padding: 20px 52px 30px 31px;
+    background-color: white;
+}
+.messageInput{
+    display: flex;
+    width: 817px;
+    height: 54px;
+    padding: 20px 21px 18px 21px;
+    align-items: center;
+    flex-shrink: 0;
+    border-radius: 10px;
+    border: 1px solid #E2E8F0;
+}
+.buttonInput:hover{
+    background-color: white;
+    box-shadow: none;
+    color: #1B2559;
+    border: 2px solid rgba(96, 61, 240, 0.48);
+}
+.buttonInput{
+    display: flex;
+    width: 192px;
+    height: 54px;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+    border-radius: 10px;
+    background: linear-gradient(15deg, #4A25E1 26.3%, #7B5AFF 86.4%);
+    box-shadow: 0px 21px 27px -10px rgba(96, 60, 255, 0.48);
+    color: #FFF;
+    font-family: Unbounded;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 16px; /* 114.286% */
+    margin-left: 10px;
+}
+
+/* Main START */
+main {
+    width: 100%;
+    max-height: 100%;
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+    margin-top: 135px;
+    background-image: url("./img/background.svg");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    /* position: absolute; */
+    max-height: 75%;
+    padding-bottom: 140px;
+    margin-left: 31%;
+  }
+  
+  .chat {
+    width: 1000px;
+  }
+  
+  .chat__item {
+    display: flex;
+    align-items: flex-start;
+    text-align: left;
+  }
+  
+  .chat__person-avatar {
+    border-radius: 50%;
+  }
+  
+  .chat__messages {
+    margin-left: 10px;
+  }
+  
+  .chat__message {
+    display: block;
+    align-items: center;
+    margin-right: 10px;
+    margin-bottom: 50px;
+  }
+  
+  .chat__message-content {
+    width: 100%;
+    max-width: 900px;
+    min-height: 60px;
+    padding: 7px;
+    display: inline-block;
+    margin-left: 5px;
+    border-radius: 14px;
+    background: #FFF;
+    box-shadow: 14px 27px 45px 4px rgba(112, 144, 176, 0.20);
+    color: #1B2559;
+    font-family: Montserrat;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 24px;
+    padding: 22px;
+  }
+  .IconImg{
+    position: relative;
+    top: 15px;
+  }
+  .chat__item--responder .IconImg, header .IconImg{
+    top: 0px;
+  }
+  .chat__messageItemInfo {
+    display: inline-flex;
+    color: #1B2559;
+    font-family: Montserrat;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 100%;
+    margin-top: 12px;
+    margin-left: 6px;
+    float: left;
+  }
+  
+  .chat__message-name {
+    margin-right: 17px;
+  }
+  
+  .chat__item--responder {
+    flex-direction: row-reverse;
+    position: relative;
+    right: -75px;
+  }
+  .chat__item--responder .chat__messageItemInfo{
+    float: right;
+  }
+  
+  .chat__item--responder .chat__message {
+    flex-direction: row-reverse;
+  }
+  
+  .chat__item--responder .chat__message-content {
+    margin-left: 0;
+    margin-right: 5px;
+  }
+  
+  /* Main END */
+  .FooterInput{
+    background-color: #4A25E1;
+  }

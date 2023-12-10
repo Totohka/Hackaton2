@@ -7,9 +7,6 @@ import SignupForm from './SignUpForm';
 Userfront.init("6nzgmwpb");
 
 const Registration = () => {
-  useLayoutEffect(() => {
-    document.getElementById('gray_space').style.backgroundColor = 'black';
-   }, []);
     return (
       <SignupForm />
     );

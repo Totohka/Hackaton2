@@ -1,0 +1,159 @@
+@import url('https://fonts.googleapis.com/css2?family=Unbounded:wght@200;300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300&family=Jost&family=Pacifico&family=Shantell+Sans:ital,wght@1,300&display=swap');
+
+.sidebar {
+    position: fixed;
+    width: 310px;
+    height: 96%;
+    left: 21px;
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 1);
+    box-shadow: 0px 17px 40px 4px rgba(112, 144, 176, 0.11);
+    margin-top: 1%;
+}
+
+.sidebar-text {
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    /* border: 1px solid red; */
+    width: 80%;
+    height: 18px;
+    top: 20%;
+    left: 10%;
+    font-family: Jost;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 18px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: #1B2559;
+}
+.admin {
+    width: 59px;
+    height: 18px;
+    flex-shrink: 0;
+    padding: 6px, 26px, 6px, 26px;
+    border-radius: 39px;
+    gap: 10px;
+    background: rgba(242, 239, 255, 1);
+    font-family: Jost;
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 16px;
+    letter-spacing: 0em;
+    text-align: center;
+    color: rgba(96, 60, 255, 1);
+}
+
+
+
+.separator {
+    position: absolute;
+    width: 310px;
+    top: 118px;
+    border: 1px;
+    border: 1px solid rgba(233, 237, 247, 1);
+
+}
+
+.Logo img {
+    position: absolute;
+    height: 70px;
+    top: 44px;
+    left: 36px;
+
+}
+
+.goOut {
+    position: absolute;
+    width: 256px;
+    height: 62px;
+    flex-shrink: 0;
+    fill: #FFF;
+    filter: drop-shadow(14px 17px 40px rgba(112, 144, 176, 0.08));
+    top: 85%;
+    left: 27px;
+
+}
+
+.goOut-frame {
+    position: absolute;
+    display: flex;
+    width: 39px;
+    height: 39px;
+    padding: 11.7px;
+    justify-content: center;
+    align-items: center;
+    gap: 6.5px;
+    flex-shrink: 0;
+    gap: 6.5px;
+    top: 20%;
+    border-radius: 78px;
+    background: linear-gradient(180deg, #FBFBFF 0%, #CACAFF 100%);
+}
+
+.goOut-frame img{
+    width: 14px;
+    height: 13px;
+    flex-shrink: 0;
+    fill: #603CFF;
+    filter: drop-shadow(0px 32.5px 40.95px rgba(67, 24, 255, 0.28));
+}
+
+.goOut .div {
+    position: absolute;
+    width: 60%;
+    color: #1B2559;
+    font-family: Unbounded;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 105%;
+    /* 14.7px */
+    top: 40%;
+    left: 20%;
+}
+
+.logout {
+    position: absolute;
+    width: 34px;
+    height: 34px;
+    flex-shrink: 0;
+    stroke-width: 1px;
+    stroke: #E0E5F2;
+    top: 24%;
+    left: 86%;
+    padding: 10.46px, 10.46px, 10.46px, 10.46px;
+    border-radius: 31px;
+    border: 1px;
+    border: 1px solid rgba(224, 229, 242, 1);
+    background: rgba(255, 255, 255, 1);
+}
+.DashboardBtn:hover{
+    background-color: white;
+  box-shadow: none;
+  color: #1B2559;
+  border: 2px solid rgba(96, 61, 240, 0.48);
+}
+.DashboardBtn{
+    display: flex;
+    margin-top: 50%;
+    width: 90%;
+    margin-left: 5%;
+    height: 54px;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+    border-radius: 10px;
+    background: linear-gradient(15deg, #4A25E1 26.3%, #7B5AFF 86.4%);
+    box-shadow: 0px 21px 27px -10px rgba(96, 60, 255, 0.48);
+    color: #FFF;
+    font-family: Unbounded;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 16px; /* 114.286% */
+}

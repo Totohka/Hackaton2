@@ -33,3 +33,5 @@ C:\Users\димон\source\repos\SignalRProjectHackaton\SignalRProjectHackaton\o
 C:\Users\димон\source\repos\SignalRProjectHackaton\SignalRProjectHackaton\obj\Debug\net7.0\SignalRProjectHackaton.pdb
 C:\Users\димон\source\repos\SignalRProjectHackaton\SignalRProjectHackaton\obj\Debug\net7.0\SignalRProjectHackaton.genruntimeconfig.cache
 C:\Users\димон\source\repos\SignalRProjectHackaton\SignalRProjectHackaton\obj\Debug\net7.0\ref\SignalRProjectHackaton.dll
+C:\Users\димон\source\repos\SignalRProjectHackaton\SignalRProjectHackaton\bin\Debug\net7.0\DevOne.Security.Cryptography.BCrypt.dll
+C:\Users\димон\source\repos\SignalRProjectHackaton\SignalRProjectHackaton\bin\Debug\net7.0\ExpressSecurity.dll

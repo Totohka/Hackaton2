@@ -1,24 +1,34 @@
-using System.Security.Cryptography;
-
+using SignalR.Project.Hackaton.DAL.Repository.Interface;
+using SignalR.Project.Hackaton.DAL;
+using SignalR.Project.Hackaton.Network.DAL.Repository.Realization;
+using SignalR.Project.Hackaton.DomainModel.Entities;
+using SignalR.Project.Hackaton.DAL.Repository.Realization;
+using SignalR.Project.Hackaton.DomainService.Service.Realization;
+using SignalR.Project.Hackaton.DomainService.Service.Interface;
+using Microsoft.EntityFrameworkCore;
+using SignalR.Project.Hackaton.DomainServices.Interface;
 
 var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddSignalR();
 
 // Add services to the container.
+builder.Services.AddDbContext<UserContext>(options =>
+               options.UseSqlServer(builder.Configuration.GetConnectionString("UserConnection")).EnableSensitiveDataLogging(), optionsLifetime: ServiceLifetime.Singleton);
+builder.Services.AddDbContextFactory<UserContext>();
 
 builder.Services.AddControllers();
-// Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
+builder.Services.AddScoped<IChatService, ChatService>();
+builder.Services.AddScoped<IUserService, UserService>();
+builder.Services.AddScoped<IDashboardService, DashboardService>();
+builder.Services.AddScoped<IConnectionService, ConnectionService>();
+builder.Services.AddScoped<IDashboardRepository, DashboardRepository>();
+builder.Services.AddScoped<IRepositoryConnection, RepositoryConnection>();
+builder.Services.AddScoped<IRepository<Message>, RepositoryMessage>();
+builder.Services.AddScoped<IUserRepository, UserRepository>();
+builder.Services.AddControllers();
+
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
-
-var keySize = 2048;
-var rsaCryptoServiceProvider = new RSACryptoServiceProvider(keySize);
-
-var connections = new Dictionary<string, string>() //<ConnectionId, AES key>
-{
-    //типо бд с подключениями
-};
-
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.

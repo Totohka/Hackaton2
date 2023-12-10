@@ -2,6 +2,8 @@ import Userfront from "@userfront/core";
 import React from "react";
 import "./Registration.css";
 import axios from "axios";
+import logo from '../Auth/img/logo.svg';
+import { NavLink } from "react-router-dom";
 
 Userfront.init("6nzgmwpb");
 
@@ -45,58 +47,58 @@ class SignupForm extends React.Component {
       data: {
       }
     });
-    axios.post('/user', {
-      firstName: this.state.firstName,
-      lastName: this.state.lastName,
-      email: this.state.email
-    })
+    fetch("https://localhost:9322/api/User", {
+      "method": "POST",
+      "headers": {
+        Accept: "*/*",
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify({
+        first_name: this.state.firstName,
+        last_name: this.state.lastName,
+        email: this.state.email
+      })
+    });
   }
 
   render() {
     return (
-        <form className="form_registration" onSubmit={this.handleSubmit}>
-        <div className="title_registration">Добро пожаловать!</div>
-        <div className="input-container ic1">
-          <input id="firstname" className="input" 
+      <div className="App">
+      <div className='RegistrationForm'>
+      <div className='Logo'>
+          <img src={logo}></img>
+      </div>
+      <h1>Регистрация</h1>
+      <form className='AutthorizationForm' onSubmit={this.handleSubmit}>
+          <input id="firstname" 
                 name="firstName"
                 type="text"
                 value={this.state.firstName}
                 onChange={this.handleInputChange} 
-                placeholder=" " />
-            <div className="cut cut-short"></div>
-          <label for="firstname" className="placeholder">Имя</label>
-        </div>
-        <div className="input-container ic2">
-          <input id="lastname" className="input" 
+                placeholder="Ваше имя" />
+          <input id="lastname" 
                 name="lastName"
                 type="text"
                 value={this.state.lastName}
-                onChange={this.handleInputChange} placeholder=" " />
-          <div className="cut "></div>
-          <label for="lastname" className="placeholder">Фамилия</label>
-        </div>
-        <div className="input-container ic2">
-          <input id="email" className="input" 
+                onChange={this.handleInputChange} placeholder="Фамилия" />
+          <input id="email" 
                 name="email"
                 type="email"
                 value={this.state.email}
                 onChange={this.handleInputChange} 
-          placeholder=" " />
-          <div className="cut cut-short"></div>
-          <label for="email" className="placeholder">Email</label>
-        </div>
-        <div className="input-container ic2">
-          <input id="password" className="input" 
+          placeholder="Email" />
+        
+          <input id="password" 
                 name="password"
                 type="password"
                 value={this.state.password}
                 onChange={this.handleInputChange}
-                placeholder=" " />
-          <div className="cut "></div>
-          <label for="password" className="placeholder">Пароль</label>
-        </div>
-        <button type="submit" className="submit">Регистрация</button>
-      </form>
+                placeholder="Пароль" />
+        <button type="submit" className='RegistrationBtn'>Регистрация</button>
+    </form>
+    <NavLink className='RegisterText' to='/login' style={{ textDecoration: 'none' }}>Войти</NavLink>
+    </div>
+    </div>
     );
   }
 }

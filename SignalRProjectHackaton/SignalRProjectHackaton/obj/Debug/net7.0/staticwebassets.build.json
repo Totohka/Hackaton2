@@ -1,8 +1,8 @@
 {
   "Version": 1,
-  "Hash": "E6298mqkFVh64LQwJEmcxBm8AEsUX5KXB+VrcOGls54=",
-  "Source": "SignalRProjectHackaton",
-  "BasePath": "_content/SignalRProjectHackaton",
+  "Hash": "BqZXgzMJ+mWDCPz38hHZR/og618sI6qtnIIL9G4LSxk=",
+  "Source": "SignalR.Project.Hackaton.Api",
+  "BasePath": "_content/SignalR.Project.Hackaton.Api",
   "Mode": "Default",
   "ManifestType": "Build",
   "ReferencedProjectsConfiguration": [],

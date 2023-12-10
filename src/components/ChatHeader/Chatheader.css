@@ -1,0 +1,243 @@
+@import url('https://fonts.googleapis.com/css2?family=Unbounded:wght@200;300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*,
+*::before,
+*:after {
+  box-sizing: border-box;
+  /* font-family: 'Inter', sans-serif; */
+}
+
+body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  /* font-family: 'Inter', sans-serif; */
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+.App {
+  /* text-align: center; */
+  background-color: white;
+  padding: 10px 50px;
+  display: block;
+}
+
+header {
+  width: 75%;
+  height: 70px;
+  flex-shrink: 0;
+  fill: #FFF;
+  box-shadow: 14px 27px 45px rgba(112, 144, 176, 0.20);
+  padding-top: 18px;
+  position: fixed;
+  top: 0;
+  z-index: 100;
+  margin-bottom: 50px;
+  margin-left: 20%;
+  background-color: white;
+}
+
+.header_wrapper {
+  width: 96%;
+  display: inline-flex;
+  justify-content: space-around;
+  position: relative;
+  margin-left: 3%;
+}
+
+.header_block {
+  float: left;
+  width: 100%;
+  display: inline-flex;
+  justify-content: left;
+}
+
+.header_block p {
+  color: #1B2559;
+  font-family: Montserrat;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 100%;
+  position: relative;
+  top: -8px;
+  left: -16px;
+  margin-right: 16px;
+}
+
+.lineHeader {
+  width: 1px;
+  height: 18px;
+  flex-shrink: 0;
+  border-radius: 10px;
+  background: #603CFF;
+  position: relative;
+  left: -14px;
+  top: 14px;
+  margin-right: 20px;
+}
+
+.header_block span {
+  color: #1B2559;
+  font-family: Montserrat;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 100%;
+  /* 14px */
+}
+
+/* SEARCH START */
+header form {
+  width: 400px;
+  float: right;
+  display: inline-flex;
+}
+
+.search input {
+  width: 300px;
+  height: 45px;
+  padding-left: 56px;
+  padding-right: 30px;
+  outline: none;
+  position: relative;
+  transition: .3s linear;
+  border-radius: 10px;
+  border: 1px solid #4B26E2;
+  background: #FFF;
+}
+
+.search input::placeholder {
+  color: rgba(0, 0, 0, 0.39);
+  font-family: Unbounded;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.search input:focus {
+  width: 350px;
+}
+
+.search button {
+  width: 40px;
+  height: 40px;
+  background: none;
+  border: none;
+  position: relative;
+  top: 7px;
+  right: -48px;
+  cursor: pointer;
+  z-index: 10;
+}
+
+/* SEARCH END */
+
+/* Main START */
+/* main {
+  width: 90%;
+  max-height: 100%;
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
+  margin-top: 135px;
+  background-image: url("./img/background.svg");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  /* position: absolute; */
+  /* max-height: 75%;
+  padding-bottom: 30px;
+  margin-left: 15%;
+}
+
+.chat {
+  width: 1000px;
+}
+
+.chat__item {
+  display: flex;
+  align-items: flex-start;
+  text-align: left;
+}
+
+.chat__person-avatar {
+  border-radius: 50%;
+}
+
+.chat__messages {
+  margin-left: 10px;
+}
+
+.chat__message {
+  display: block;
+  align-items: center;
+  margin-right: 10px;
+  margin-bottom: 50px;
+}
+
+.chat__message-content {
+  width: 940px;
+  min-height: 60px;
+  padding: 7px;
+  display: inline-block;
+  margin-left: 5px;
+  border-radius: 14px;
+  background: #FFF;
+  box-shadow: 14px 27px 45px 4px rgba(112, 144, 176, 0.20);
+  color: #1B2559;
+  font-family: Montserrat;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 24px;
+  padding: 22px;
+}
+.IconImg{
+  position: relative;
+  top: 15px;
+}
+.chat__item--responder .IconImg, header .IconImg{
+  top: 0px;
+}
+.chat__messageItemInfo {
+  display: inline-flex;
+  color: #1B2559;
+  font-family: Montserrat;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 100%;
+  margin-top: 12px;
+  margin-left: 6px;
+  float: left;
+}
+
+.chat__message-name {
+  margin-right: 17px;
+}
+
+.chat__item--responder {
+  flex-direction: row-reverse;
+  position: relative;
+  right: -75px;
+}
+.chat__item--responder .chat__messageItemInfo{
+  float: right;
+}
+
+.chat__item--responder .chat__message {
+  flex-direction: row-reverse;
+}
+
+.chat__item--responder .chat__message-content {
+  margin-left: 0;
+  margin-right: 5px;
+} */ 
+
+/* Main END */
+

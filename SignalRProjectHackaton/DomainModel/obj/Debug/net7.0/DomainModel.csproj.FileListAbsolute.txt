@@ -1,0 +1,11 @@
+C:\Users\димон\source\repos\SignalRProjectHackaton\DomainModel\bin\Debug\net7.0\DomainModel.deps.json
+C:\Users\димон\source\repos\SignalRProjectHackaton\DomainModel\bin\Debug\net7.0\DomainModel.dll
+C:\Users\димон\source\repos\SignalRProjectHackaton\DomainModel\bin\Debug\net7.0\DomainModel.pdb
+C:\Users\димон\source\repos\SignalRProjectHackaton\DomainModel\obj\Debug\net7.0\DomainModel.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\димон\source\repos\SignalRProjectHackaton\DomainModel\obj\Debug\net7.0\DomainModel.AssemblyInfoInputs.cache
+C:\Users\димон\source\repos\SignalRProjectHackaton\DomainModel\obj\Debug\net7.0\DomainModel.AssemblyInfo.cs
+C:\Users\димон\source\repos\SignalRProjectHackaton\DomainModel\obj\Debug\net7.0\DomainModel.csproj.CoreCompileInputs.cache
+C:\Users\димон\source\repos\SignalRProjectHackaton\DomainModel\obj\Debug\net7.0\DomainModel.dll
+C:\Users\димон\source\repos\SignalRProjectHackaton\DomainModel\obj\Debug\net7.0\refint\DomainModel.dll
+C:\Users\димон\source\repos\SignalRProjectHackaton\DomainModel\obj\Debug\net7.0\DomainModel.pdb
+C:\Users\димон\source\repos\SignalRProjectHackaton\DomainModel\obj\Debug\net7.0\ref\DomainModel.dll
